@@ -14,7 +14,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
-@Table(name="tb_gamelist")
+@Table(name="tb_game_list")
 public class GameList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
