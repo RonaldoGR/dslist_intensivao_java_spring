@@ -3,7 +3,6 @@ package br.com.devsuperior.dslist.dto;
 import br.com.devsuperior.dslist.entities.Game;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @NoArgsConstructor
 @Getter

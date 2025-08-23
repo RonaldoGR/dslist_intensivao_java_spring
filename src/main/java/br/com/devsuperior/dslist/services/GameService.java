@@ -24,9 +24,13 @@ public class GameService {
         return games.stream().map(game -> new GameMinDTO(game)).toList();
     }
 
+    @Transactional(readOnly = true)
     public GameDTO findById(Long id) {
-        // fazer tratamento de exceção
+        // fazer tratamento de exceção quando ID não existir
         Game result = gameRepository.findById(id).get();
         return new GameDTO(result);
     }
+
+
+
 }
