@@ -33,7 +33,7 @@
 		{
 			"name": "Game lists replacement",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": []
 			},
 			"response": []
