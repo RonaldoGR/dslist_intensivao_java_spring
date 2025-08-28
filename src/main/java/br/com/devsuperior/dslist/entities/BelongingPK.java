@@ -2,7 +2,6 @@ package br.com.devsuperior.dslist.entities;
 
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;

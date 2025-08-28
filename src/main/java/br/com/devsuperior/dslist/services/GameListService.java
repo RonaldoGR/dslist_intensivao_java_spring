@@ -1,8 +1,8 @@
 package br.com.devsuperior.dslist.services;
 
 import br.com.devsuperior.dslist.dto.GameListDTO;
-import br.com.devsuperior.dslist.entities.Game;
 import br.com.devsuperior.dslist.entities.GameList;
+import br.com.devsuperior.dslist.exceptions.GameListNotFoundException;
 import br.com.devsuperior.dslist.projections.GameMinProjection;
 import br.com.devsuperior.dslist.repository.GameListRepository;
 import br.com.devsuperior.dslist.repository.GameRepository;
@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class GameListService {
@@ -25,6 +24,9 @@ public class GameListService {
     @Transactional(readOnly = true)
     public List<GameListDTO> findAllLists() {
         List<GameList> list = gameListRepository.findAll();
+        if (list.isEmpty()) {
+            throw new GameListNotFoundException("No GameList found");
+        }
         return list.stream().map(game -> new GameListDTO(game)).toList();
     }
 
