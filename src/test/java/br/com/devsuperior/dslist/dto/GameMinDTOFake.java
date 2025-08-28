@@ -1,6 +1,6 @@
-package br.com.devsuperior.dslist.entities;
+package br.com.devsuperior.dslist.dto;
 
-import br.com.devsuperior.dslist.dto.GameMinDTO;
+import br.com.devsuperior.dslist.entities.Game;
 import br.com.devsuperior.dslist.projections.GameMinProjection;
 import lombok.Getter;
 import lombok.Setter;

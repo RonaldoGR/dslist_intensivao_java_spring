@@ -2,7 +2,7 @@ package br.com.devsuperior.dslist.services;
 
 
 import br.com.devsuperior.dslist.entities.Game;
-import br.com.devsuperior.dslist.entities.GameMinDTOFake;
+import br.com.devsuperior.dslist.dto.GameMinDTOFake;
 import br.com.devsuperior.dslist.exceptions.GameListNotFoundException;
 import br.com.devsuperior.dslist.exceptions.GameNotFounException;
 import br.com.devsuperior.dslist.exceptions.NotExistGamesException;
